@@ -1,12 +1,4 @@
-import { ChevronDown } from 'lucide-react';
 import { businessCategories } from '@/data/businessCategories';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
 
 interface NavigationProps {
   mobile?: boolean;
@@ -70,29 +62,20 @@ export const Navigation = ({ mobile = false, onItemClick }: NavigationProps) => 
         Home
       </a>
       
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="flex items-center space-x-1 font-medium">
-            <span>Solutions</span>
-            <ChevronDown className="h-4 w-4" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-80">
+      <div className="flex items-center space-x-1">
+        <span className="text-foreground font-medium">Shop</span>
+        <div className="flex flex-wrap items-center gap-2 ml-4">
           {businessCategories.map((category) => (
-            <DropdownMenuItem key={category.id} asChild>
-              <a
-                href={category.href}
-                className="flex flex-col items-start space-y-1 p-3 cursor-pointer"
-              >
-                <span className="font-medium">{category.title}</span>
-                <span className="text-sm text-muted-foreground line-clamp-2">
-                  {category.description}
-                </span>
-              </a>
-            </DropdownMenuItem>
+            <a
+              key={category.id}
+              href={category.href}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
+            >
+              {category.title}
+            </a>
           ))}
-        </DropdownMenuContent>
-      </DropdownMenu>
+        </div>
+      </div>
 
       <a
         href="/about"

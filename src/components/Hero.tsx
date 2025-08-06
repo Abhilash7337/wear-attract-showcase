@@ -1,9 +1,13 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { BackgroundPaths } from '@/components/ui/background-paths';
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted overflow-hidden">
+      {/* Animated Background Paths */}
+      <BackgroundPaths />
+      
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-10 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
@@ -29,8 +33,7 @@ const Hero = () => {
 
           {/* Subheading */}
           <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            Transform your business with revolutionary smart clothing technology. 
-            No minimum orders, unlimited personalization, and cutting-edge WearTap features.
+            Wear Attraction for Business crafts custom, smart, and sustainable apparel to perfectly fit your brand, with options for NFC/QR integration.
           </p>
 
           {/* CTA Buttons */}

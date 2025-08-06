@@ -55,7 +55,7 @@ export const businessCategories: BusinessCategory[] = [
   },
   {
     id: 'fitness-wellness-brands',
-    title: 'Fitness & Wellness Brands',
+    title: 'Fitness Professionals & Wellness Brands',
     description: 'Smart activewear that tracks performance, motivates users, and builds stronger connections between brands and fitness enthusiasts.',
     icon: 'Heart',
     href: '/fitness-wellness-brands',
