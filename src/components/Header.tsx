@@ -47,38 +47,36 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
-          {/* Logo */}
-          <div className="flex items-center">
+
+        <div className="flex items-center justify-between h-24 relative">
+          {/* Left: Home, Shop, About, Contact */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <a href="/" className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200">Home</a>
+            <a href="/shop" className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200">Shop</a>
+            <a href="/about" className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200">About</a>
+            <a href="/contact" className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200">Contact</a>
+          </nav>
+
+          {/* Center: Logo (absolutely centered) */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
             <a href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
               <img 
                 src={theme === 'light' ? '/logo-light.png' : '/logo.png'}
                 alt="Wear Attraction" 
-                className="h-20 w-auto transition-all duration-300 hover:scale-105"
+                className="h-20 w-auto transition-all duration-300 hover:scale-105 drop-shadow-lg"
               />
             </a>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <Navigation />
-          </div>
-
-          {/* Desktop Actions */}
+          {/* Right: utility icons only */}
           <div className="hidden md:flex items-center space-x-6">
             <ThemeToggle />
-            
-            {/* Search Icon */}
             <button className="p-2 hover:bg-accent rounded-lg transition-all duration-200 hover:scale-110 group">
               <Search className="h-5 w-5 text-foreground group-hover:text-primary transition-colors duration-200" />
             </button>
-            
-            {/* User Profile Icon */}
             <button className="p-2 hover:bg-accent rounded-lg transition-all duration-200 hover:scale-110 group">
               <User className="h-5 w-5 text-foreground group-hover:text-primary transition-colors duration-200" />
             </button>
-            
-            {/* Shopping Bag Icon */}
             <button className="p-2 hover:bg-accent rounded-lg transition-all duration-200 hover:scale-110 group">
               <ShoppingBag className="h-5 w-5 text-foreground group-hover:text-primary transition-colors duration-200" />
             </button>

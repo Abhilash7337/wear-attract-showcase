@@ -2,94 +2,75 @@ import { BusinessCategory } from '@/types';
 
 export const businessCategories: BusinessCategory[] = [
   {
-    id: 'startups-teams',
-    title: 'Startups & Teams',
-    description: 'Smart clothing solutions for innovative startups and dynamic teams looking to build brand identity and enhance team collaboration.',
-    icon: 'Rocket',
-    href: '/startups-teams',
-    features: [
-      'Custom team branding on smart clothing',
-      'Real-time team connectivity',
-      'Startup identity building',
-      'Flexible ordering for growing teams'
-    ]
-  },
-  {
-    id: 'events-conferences',
-    title: 'Events & Conferences',
-    description: 'Transform your events with interactive smart clothing that enhances networking and creates memorable experiences.',
-    icon: 'Calendar',
-    href: '/events-conferences',
-    features: [
-      'Interactive networking capabilities',
-      'Event-specific customization',
-      'Real-time attendee engagement',
-      'Memorable event experiences'
-    ]
-  },
-  {
-    id: 'hospitality-service-staff',
-    title: 'Hospitality & Service Staff',
-    description: 'Elevate customer service with smart uniforms that provide instant access to information and enhance guest experiences.',
+    id: 'it-companies',
+    title: 'IT Companies',
+    description: 'Smart polo shirts and business attire with embedded contact info, GitHub profiles, and portfolio links.',
     icon: 'Users',
-    href: '/hospitality-service-staff',
+    href: '/it-companies',
     features: [
-      'Instant customer service access',
-      'Professional smart uniforms',
-      'Enhanced guest interactions',
-      'Service efficiency optimization'
+      'Employee profiles',
+      'Company info',
+      'Project showcases'
     ]
   },
   {
-    id: 'studios-performance-teams',
-    title: 'Studios & Performance Teams',
-    description: 'Revolutionary smart clothing for creative studios and performance teams to enhance artistic expression and audience engagement.',
-    icon: 'Video',
-    href: '/studios-performance-teams',
-    features: [
-      'Performance-enhancing technology',
-      'Creative expression tools',
-      'Audience engagement features',
-      'Studio branding integration'
-    ]
-  },
-  {
-    id: 'fitness-wellness-brands',
-    title: 'Fitness Professionals & Wellness Brands',
-    description: 'Smart activewear that tracks performance, motivates users, and builds stronger connections between brands and fitness enthusiasts.',
-    icon: 'Heart',
-    href: '/fitness-wellness-brands',
-    features: [
-      'Performance tracking integration',
-      'Motivational features',
-      'Brand-customer connection',
-      'Wellness monitoring capabilities'
-    ]
-  },
-  {
-    id: 'schools-educational-institutions',
-    title: 'Schools & Educational Institutions',
-    description: 'Smart clothing solutions for educational environments that enhance learning experiences and improve campus connectivity.',
-    icon: 'GraduationCap',
-    href: '/schools-educational-institutions',
-    features: [
-      'Educational content delivery',
-      'Campus connectivity features',
-      'Student engagement tools',
-      'Safety and security integration'
-    ]
-  },
-  {
-    id: 'retail-cafes-boutiques',
-    title: 'Retail, Cafes & Boutiques',
-    description: 'Smart retail solutions that create unique customer experiences and drive engagement in retail environments.',
+    id: 'small-businesses',
+    title: 'Small Businesses',
+    description: 'Cost-effective uniforms with no minimums. Perfect for startups and growing businesses.',
     icon: 'ShoppingBag',
-    href: '/retail-cafes-boutiques',
+    href: '/small-businesses',
     features: [
-      'Customer experience enhancement',
-      'Interactive product information',
-      'Brand storytelling capabilities',
-      'Customer engagement analytics'
+      'No minimum orders',
+      'Budget-friendly',
+      'Professional appearance'
+    ]
+  },
+  {
+    id: 'events',
+    title: 'Events',
+    description: 'Staff apparel that enhances networking with instant contact sharing and event information.',
+    icon: 'Calendar',
+    href: '/events',
+    features: [
+      'Event schedules',
+      'Speaker info',
+      'Networking tools'
+    ]
+  },
+  {
+    id: 'restaurants',
+    title: 'Restaurants',
+    description: 'Chef coats and server uniforms linking to menus, specials, and customer feedback forms.',
+    icon: 'ChefHat',
+    href: '/restaurants',
+    features: [
+      'Digital menus',
+      'Special offers',
+      'Customer reviews'
+    ]
+  },
+  {
+    id: 'fitness-professionals',
+    title: 'Fitness Professionals',
+    description: 'Workout gear that connects clients to training programs, nutrition guides, and booking systems.',
+    icon: 'Dumbbell',
+    href: '/fitness-professionals',
+    features: [
+      'Workout programs',
+      'Nutrition guides',
+      'Class schedules'
+    ]
+  },
+  {
+    id: 'schools',
+    title: 'Schools',
+    description: 'Educational uniforms and staff attire with links to resources, schedules, and communication tools.',
+    icon: 'GraduationCap',
+    href: '/schools',
+    features: [
+      'School resources',
+      'Parent communication',
+      'Event updates'
     ]
   }
 ];

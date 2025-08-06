@@ -1,19 +1,92 @@
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { BackgroundPaths } from '@/components/ui/background-paths';
 
 const Hero = () => {
+  // Array of t-shirt images for floating animation
+  const tshirtImages = [
+    '/tshirt.png',
+    '/tshirt1.png',
+    // Add more t-shirt images here as they become available
+    // '/tshirt2.png',
+    // '/tshirt3.png',
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted overflow-hidden pt-24">
-      {/* Animated Background Paths */}
-      <BackgroundPaths />
-      
       {/* Enhanced Background decoration with modern animations */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-10 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float animate-stagger-3"></div>
         <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/15 rounded-full blur-2xl animate-float animate-stagger-2"></div>
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-primary/25 rounded-full blur-3xl animate-float animate-stagger-4"></div>
+      </div>
+
+      {/* Floating Product Showcase - Small T-shirts with modern movement */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Small floating t-shirts with orbital movements */}
+        <div className="absolute top-20 left-16 w-12 h-12 opacity-20 animate-pulse">
+          <div className="w-full h-full animate-spin" style={{ animationDuration: '20s' }}>
+            <div className="w-full h-full animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
+              <img src={tshirtImages[0]} alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
+            </div>
+          </div>
+        </div>
+        
+        <div className="absolute top-32 right-20 w-10 h-10 opacity-15">
+          <div className="w-full h-full animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}>
+            <div className="w-full h-full animate-bounce" style={{ animationDelay: '1s', animationDuration: '4s' }}>
+              <img src={tshirtImages[1]} alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-32 left-24 w-14 h-14 opacity-25">
+          <div className="w-full h-full animate-spin" style={{ animationDuration: '30s' }}>
+            <div className="w-full h-full animate-pulse" style={{ animationDelay: '2s', animationDuration: '2.5s' }}>
+              <img src={tshirtImages[0]} alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute top-40 left-1/3 w-8 h-8 opacity-20">
+          <div className="w-full h-full animate-spin" style={{ animationDuration: '18s', animationDirection: 'reverse' }}>
+            <div className="w-full h-full animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '3.5s' }}>
+              <img src={tshirtImages[1]} alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-48 right-1/4 w-11 h-11 opacity-15">
+          <div className="w-full h-full animate-spin" style={{ animationDuration: '22s' }}>
+            <div className="w-full h-full animate-pulse" style={{ animationDelay: '1.5s', animationDuration: '3s' }}>
+              <img src={tshirtImages[0]} alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute top-60 right-16 w-9 h-9 opacity-30">
+          <div className="w-full h-full animate-spin" style={{ animationDuration: '28s', animationDirection: 'reverse' }}>
+            <div className="w-full h-full animate-bounce" style={{ animationDelay: '2.5s', animationDuration: '4.5s' }}>
+              <img src={tshirtImages[1]} alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute top-80 left-1/2 w-13 h-13 opacity-25">
+          <div className="w-full h-full animate-spin" style={{ animationDuration: '26s' }}>
+            <div className="w-full h-full animate-pulse" style={{ animationDelay: '3s', animationDuration: '2.8s' }}>
+              <img src="/tshirt.png" alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-40 left-1/4 w-10 h-10 opacity-20">
+          <div className="w-full h-full animate-spin" style={{ animationDuration: '24s', animationDirection: 'reverse' }}>
+            <div className="w-full h-full animate-bounce" style={{ animationDelay: '1.8s', animationDuration: '3.2s' }}>
+              <img src="/tshirt.png" alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Animated particles */}
@@ -27,19 +100,25 @@ const Hero = () => {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Main heading with enhanced animations */}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in-up opacity-0">
-            <span className="inline-block animate-slide-in-left animate-stagger-1">Smart</span>{' '}
-            <span className="inline-block animate-slide-in-right animate-stagger-2">Clothing</span>{' '}
-            <span className="inline-block animate-fade-in-up animate-stagger-3">for</span>{' '}
-            <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent animate-gradient-shift animate-scale-in animate-stagger-4">
-              Modern Business
+          {/* Main heading with multi-color gradient as in screenshot */}
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 animate-fade-in-up opacity-0">
+            <span className="bg-gradient-to-r from-yellow-400 via-pink-500 via-40% via-cyan-400 to-orange-400 bg-clip-text text-transparent">
+              Smart Business Apparel<br />
+              <span className="block" style={{
+                background: 'linear-gradient(90deg, #FACC15 0%, #F472B6 30%, #38BDF8 60%, #FDBA74 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                color: 'transparent'
+              }}>
+                Redefined
+              </span>
             </span>
           </h1>
 
           {/* Subheading with staggered animation */}
-          <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animate-stagger-3 opacity-0">
-            Wear Attraction for Business crafts custom, smart, and sustainable apparel to perfectly fit your brand, with options for NFC/QR integration.
+          <p className="text-xl sm:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animate-stagger-3 opacity-0">
+            Transform your business apparel into interactive experiences. From t-shirts to executive suits, every piece features smart QR & NFC technology. No minimums. Unlimited colors. Built for modern businesses.
           </p>
 
           {/* CTA Button with enhanced effects */}

@@ -1,30 +1,30 @@
-import { Package, Zap, Palette, Clock } from 'lucide-react';
+import { Users, Zap, Palette, TrendingUp } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useEffect, useRef, useState } from 'react';
 
 const features = [
   {
-    icon: Package,
+    icon: Users,
     title: 'No Minimum Orders',
-    description: 'Start with as few as one piece. Perfect for testing, small teams, or individual needs.',
+    description: 'Order as few as 1 piece. Perfect for startups, SMEs, and large enterprises.',
     gradient: 'from-blue-500 to-cyan-500'
   },
   {
     icon: Zap,
-    title: 'WearTap Technology',
-    description: 'Revolutionary smart clothing technology that transforms how people connect and interact.',
+    title: 'Smart Technology',
+    description: 'Built-in QR codes and NFC chips with advanced tracking and link management.',
     gradient: 'from-purple-500 to-pink-500'
   },
   {
     icon: Palette,
-    title: 'Personalization at Scale',
-    description: 'Custom designs and features tailored to your specific business needs and brand identity.',
+    title: 'Unlimited Colors',
+    description: 'Match your exact brand colors with our extensive customization options.',
     gradient: 'from-green-500 to-emerald-500'
   },
   {
-    icon: Clock,
-    title: 'Fast Turnaround',
-    description: 'Quick production and delivery times to meet your business deadlines and events.',
+    icon: TrendingUp,
+    title: 'Analytics Tracking',
+    description: 'Track every interaction and engagement. Update links anytime through our dashboard.',
     gradient: 'from-orange-500 to-red-500'
   }
 ];
