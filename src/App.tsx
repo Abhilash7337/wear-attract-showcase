@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CategoryPage from "./pages/CategoryPage";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
             <Route path="/startups-teams" element={<CategoryPage categoryId="startups-teams" />} />
             <Route path="/events-conferences" element={<CategoryPage categoryId="events-conferences" />} />
             <Route path="/hospitality-service-staff" element={<CategoryPage categoryId="hospitality-service-staff" />} />

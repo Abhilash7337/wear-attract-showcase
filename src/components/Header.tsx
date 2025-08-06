@@ -1,22 +1,61 @@
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X, Search, User, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './ThemeToggle';
 import { Navigation } from './Navigation';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const { theme } = useTheme();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show/hide header based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down & past 100px
+        setIsVisible(false);
+      } else {
+        // Scrolling up or at top
+        setIsVisible(true);
+      }
+      
+      // Add background blur when scrolled
+      setIsScrolled(currentScrollY > 0);
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 border-b border-border ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      } ${
+        isScrolled 
+          ? 'bg-background/95 backdrop-blur-md shadow-lg' 
+          : 'bg-background/80 backdrop-blur-sm'
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
-              Wear Attraction
+            <a href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
+              <img 
+                src={theme === 'light' ? '/logo-light.png' : '/logo.png'}
+                alt="Wear Attraction" 
+                className="h-20 w-auto transition-all duration-300 hover:scale-105"
+              />
             </a>
           </div>
 
@@ -26,14 +65,23 @@ const Header = () => {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-6">
             <ThemeToggle />
-            <Button variant="outline" size="sm">
-              Contact Sales
-            </Button>
-            <Button size="sm" className="brand-gradient text-white">
-              Get Started
-            </Button>
+            
+            {/* Search Icon */}
+            <button className="p-2 hover:bg-accent rounded-lg transition-all duration-200 hover:scale-110 group">
+              <Search className="h-5 w-5 text-foreground group-hover:text-primary transition-colors duration-200" />
+            </button>
+            
+            {/* User Profile Icon */}
+            <button className="p-2 hover:bg-accent rounded-lg transition-all duration-200 hover:scale-110 group">
+              <User className="h-5 w-5 text-foreground group-hover:text-primary transition-colors duration-200" />
+            </button>
+            
+            {/* Shopping Bag Icon */}
+            <button className="p-2 hover:bg-accent rounded-lg transition-all duration-200 hover:scale-110 group">
+              <ShoppingBag className="h-5 w-5 text-foreground group-hover:text-primary transition-colors duration-200" />
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -43,7 +91,7 @@ const Header = () => {
               variant="ghost"
               size="sm"
               onClick={toggleMenu}
-              className="p-2"
+              className="p-2 hover:scale-105 transition-transform duration-200"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -52,13 +100,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
+          <div className="md:hidden py-4 border-t border-border animate-fade-in-up">
             <Navigation mobile onItemClick={() => setIsMenuOpen(false)} />
             <div className="mt-4 space-y-2">
-              <Button variant="outline" className="w-full" size="sm">
+              <Button variant="outline" className="w-full hover:scale-105 transition-transform duration-200" size="sm">
                 Contact Sales
               </Button>
-              <Button className="w-full brand-gradient text-white" size="sm">
+              <Button className="w-full brand-gradient text-white hover:scale-105 transition-transform duration-200" size="sm">
                 Get Started
               </Button>
             </div>

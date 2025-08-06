@@ -4,7 +4,7 @@ import { BackgroundPaths } from '@/components/ui/background-paths';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted overflow-hidden pt-24">
       {/* Animated Background Paths */}
       <BackgroundPaths />
       
