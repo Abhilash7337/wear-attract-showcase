@@ -48,14 +48,11 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="flex items-center justify-between h-24 relative">
-          {/* Left: Home, Shop, About, Contact */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200">Home</a>
-            <a href="/shop" className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200">Shop</a>
-            <a href="/about" className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200">About</a>
-            <a href="/contact" className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200">Contact</a>
-          </nav>
+        <div className="flex items-center justify-between h-16 relative">
+          {/* Left: Navigation with Shop Dropdown */}
+          <div className="hidden md:block">
+            <Navigation />
+          </div>
 
           {/* Center: Logo (absolutely centered) */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
@@ -63,7 +60,7 @@ const Header = () => {
               <img 
                 src={theme === 'light' ? '/logo-light.png' : '/logo.png'}
                 alt="Wear Attraction" 
-                className="h-20 w-auto transition-all duration-300 hover:scale-105 drop-shadow-lg"
+                className="h-10 w-auto transition-all duration-300 hover:scale-105 drop-shadow-lg"
               />
             </a>
           </div>
