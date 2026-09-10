@@ -75,7 +75,7 @@ const Hero = () => {
         <div className="absolute top-80 left-1/2 w-13 h-13 opacity-25">
           <div className="w-full h-full animate-spin" style={{ animationDuration: '26s' }}>
             <div className="w-full h-full animate-pulse" style={{ animationDelay: '3s', animationDuration: '2.8s' }}>
-              <img src="/tshirt.png" alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
+              <img src={tshirtImages[0]} alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ const Hero = () => {
         <div className="absolute bottom-40 left-1/4 w-10 h-10 opacity-20">
           <div className="w-full h-full animate-spin" style={{ animationDuration: '24s', animationDirection: 'reverse' }}>
             <div className="w-full h-full animate-bounce" style={{ animationDelay: '1.8s', animationDuration: '3.2s' }}>
-              <img src="/tshirt.png" alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
+              <img src={tshirtImages[1]} alt="T-Shirt" className="w-full h-full object-contain filter drop-shadow-sm" />
             </div>
           </div>
         </div>

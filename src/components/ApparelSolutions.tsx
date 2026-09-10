@@ -2,19 +2,19 @@ import React, { useRef, useEffect, useState } from 'react';
 
 const apparelSolutions = [
   {
-    image: '/images/apparel-shirts.jpg',
+    image: `${import.meta.env.BASE_URL}images/apparel-shirts.svg`,
     title: 'Corporate Shirts',
     description: 'Professional shirts and polo shirts for your team with smart features',
     tags: ['Polo Shirts', 'Dress Shirts', 'Casual Shirts']
   },
   {
-    image: '/images/apparel-suits.jpg',
+    image: `${import.meta.env.BASE_URL}images/apparel-suits.svg`,
     title: 'Suits & Formal Wear',
     description: 'Executive and formal business attire with integrated technology',
     tags: ['Business Suits', 'Blazers', 'Formal Wear']
   },
   {
-    image: '/images/apparel-work.jpg',
+    image: `${import.meta.env.BASE_URL}images/apparel-work.svg`,
     title: 'Work Uniforms',
     description: 'Practical uniforms for various industries with smart capabilities',
     tags: ['Aprons', 'Work Shirts', 'Safety Wear']

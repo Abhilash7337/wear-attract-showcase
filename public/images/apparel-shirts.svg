@@ -1,0 +1,40 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgShirts" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#132a33"/>
+    </linearGradient>
+    <linearGradient id="garmentShirts" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8fbff"/>
+      <stop offset="100%" stop-color="#a9e7f2"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" fill="url(#bgShirts)"/>
+  <circle cx="400" cy="60" r="90" fill="#17b6c4" opacity="0.12"/>
+  <circle cx="60" cy="280" r="110" fill="#17b6c4" opacity="0.10"/>
+
+  <!-- Polo shirt -->
+  <g transform="translate(150,70)">
+    <path d="M40 10 L80 0 L100 22 L86 40 L74 30 L74 150 Q74 160 64 160 L16 160 Q6 160 6 150 L6 30 L-6 40 L-20 22 L0 0 Z"
+      fill="url(#garmentShirts)" stroke="#0e7c88" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M40 10 L52 26 L40 40 L28 26 Z" fill="#0e7c88" opacity="0.35"/>
+    <line x1="40" y1="46" x2="40" y2="150" stroke="#0e7c88" stroke-width="2" opacity="0.4"/>
+    <circle cx="40" cy="64" r="3" fill="#0e7c88" opacity="0.5"/>
+    <circle cx="40" cy="86" r="3" fill="#0e7c88" opacity="0.5"/>
+    <circle cx="40" cy="108" r="3" fill="#0e7c88" opacity="0.5"/>
+  </g>
+
+  <!-- Dress shirt -->
+  <g transform="translate(280,60)">
+    <path d="M35 8 L70 0 L88 20 L76 36 L64 28 L64 165 Q64 175 54 175 L16 175 Q6 175 6 165 L6 28 L-6 36 L-18 20 L0 0 Z"
+      fill="#f4fbff" stroke="#0e7c88" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M35 8 L46 24 L35 40 L24 24 Z" fill="#17b6c4" opacity="0.5"/>
+    <line x1="35" y1="46" x2="35" y2="165" stroke="#0e7c88" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="35" cy="60" r="2.5" fill="#0e7c88"/>
+    <circle cx="35" cy="80" r="2.5" fill="#0e7c88"/>
+    <circle cx="35" cy="100" r="2.5" fill="#0e7c88"/>
+    <circle cx="35" cy="120" r="2.5" fill="#0e7c88"/>
+  </g>
+
+  <text x="240" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7fd7e0" letter-spacing="2">CORPORATE SHIRTS</text>
+</svg>

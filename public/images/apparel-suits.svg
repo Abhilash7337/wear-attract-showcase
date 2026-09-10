@@ -1,0 +1,32 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgSuits" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#1a1730"/>
+    </linearGradient>
+    <linearGradient id="garmentSuits" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b3446"/>
+      <stop offset="100%" stop-color="#141a26"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" fill="url(#bgSuits)"/>
+  <circle cx="420" cy="260" r="100" fill="#17b6c4" opacity="0.10"/>
+  <circle cx="50" cy="40" r="80" fill="#17b6c4" opacity="0.10"/>
+
+  <!-- Blazer -->
+  <g transform="translate(150,50)">
+    <path d="M90 0 L60 20 L45 4 L0 30 L18 60 L34 50 L34 185 Q34 195 44 195 L136 195 Q146 195 146 185 L146 50 L162 60 L180 30 L135 4 L120 20 Z"
+      fill="url(#garmentSuits)" stroke="#17b6c4" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Lapels -->
+    <path d="M90 0 L60 20 L78 90 L90 55 Z" fill="#0f172a" stroke="#17b6c4" stroke-width="2"/>
+    <path d="M90 0 L120 20 L102 90 L90 55 Z" fill="#0f172a" stroke="#17b6c4" stroke-width="2"/>
+    <!-- Shirt/tie triangle -->
+    <path d="M78 90 L90 55 L102 90 L90 120 Z" fill="#e8fbff"/>
+    <path d="M85 90 L90 82 L95 90 L92 130 L90 140 L88 130 Z" fill="#17b6c4"/>
+    <!-- Buttons -->
+    <circle cx="90" cy="150" r="3" fill="#17b6c4"/>
+    <circle cx="90" cy="170" r="3" fill="#17b6c4"/>
+  </g>
+
+  <text x="240" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7fd7e0" letter-spacing="2">SUITS &amp; FORMAL WEAR</text>
+</svg>

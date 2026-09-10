@@ -74,7 +74,7 @@ const ApparelSmartTech = () => {
             style={{ animationDelay: isVisible ? '700ms' : '0ms', transitionDelay: isVisible ? '700ms' : '0ms' }}
           >
             <div className="w-full max-w-xl rounded-3xl overflow-hidden bg-card border border-border shadow-xl mb-8">
-              <img src="/images/business-apparel-demo.jpg" alt="Business Apparel Demo" className="w-full h-80 object-cover object-center" />
+              <img src={`${import.meta.env.BASE_URL}images/business-apparel-demo.svg`} alt="Business Apparel Demo" className="w-full h-80 object-cover object-center" />
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-2 text-center">Transform Your Brand Experience</h3>
             <p className="text-muted-foreground mb-6 text-center max-w-lg">Convert your business apparel into powerful interactive marketing tools and sophisticated networking facilitators that work 24/7.</p>

@@ -1,0 +1,46 @@
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgDemo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#12222a"/>
+    </linearGradient>
+    <linearGradient id="garmentDemo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8fbff"/>
+      <stop offset="100%" stop-color="#a9e7f2"/>
+    </linearGradient>
+    <radialGradient id="pulseDemo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#17b6c4" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#17b6c4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="320" fill="url(#bgDemo)"/>
+  <circle cx="520" cy="60" r="120" fill="#17b6c4" opacity="0.10"/>
+  <circle cx="80" cy="270" r="130" fill="#17b6c4" opacity="0.08"/>
+
+  <!-- Hoodie / t-shirt torso -->
+  <g transform="translate(210,55)">
+    <path d="M60 10 L120 0 L150 32 L128 58 L108 44 L108 210 Q108 220 98 220 L22 220 Q12 220 12 210 L12 44 L-8 58 L-30 32 L0 0 Z"
+      fill="url(#garmentDemo)" stroke="#0e7c88" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M60 10 L78 32 L60 52 L42 32 Z" fill="#0e7c88" opacity="0.3"/>
+
+    <!-- NFC chip pulse on chest -->
+    <circle cx="60" cy="105" r="30" fill="url(#pulseDemo)"/>
+    <circle cx="60" cy="105" r="14" fill="#0b1120" stroke="#17b6c4" stroke-width="2.5"/>
+    <path d="M52 98 a11 11 0 0 1 16 0" fill="none" stroke="#17b6c4" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M55 102 a6 6 0 0 1 10 0" fill="none" stroke="#17b6c4" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="60" cy="108" r="2" fill="#17b6c4"/>
+  </g>
+
+  <!-- Phone tapping -->
+  <g transform="translate(400,120)">
+    <rect x="0" y="0" width="70" height="130" rx="14" fill="#0f172a" stroke="#17b6c4" stroke-width="3"/>
+    <rect x="8" y="14" width="54" height="90" rx="4" fill="#132a33"/>
+    <circle cx="35" cy="116" r="5" fill="#17b6c4"/>
+    <!-- Signal waves toward chip -->
+    <path d="M-6 65 Q-22 65 -30 50" fill="none" stroke="#17b6c4" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <path d="M-6 65 Q-30 65 -46 40" fill="none" stroke="#17b6c4" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+    <path d="M-6 65 Q-38 65 -62 30" fill="none" stroke="#17b6c4" stroke-width="3" stroke-linecap="round" opacity="0.3"/>
+  </g>
+
+  <text x="320" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#7fd7e0" letter-spacing="2">TAP. CONNECT. ENGAGE.</text>
+</svg>
