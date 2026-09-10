@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# Wear Attraction — Smart Business Apparel
 
-## Project info
+A marketing/showcase site for **Wear Attraction**, a smart-clothing concept for businesses:
+apparel embedded with QR & NFC technology, unlimited personalization, and no minimum order
+quantities. Built with React, TypeScript, and shadcn/ui.
 
-**URL**: https://lovable.dev/projects/c8ea970b-bc55-46e9-9515-9e48be4fd7b8
+**Live demo:** https://Abhilash7337.github.io/wear-attract-showcase/
 
-## How can I edit this code?
+![Hero section screenshot](docs/hero-screenshot.png)
 
-There are several ways of editing your application.
+## What's in the app
 
-**Use Lovable**
+- **Home** (`/`) — hero, feature highlights, smart-tech overview, and business categories.
+- **About** (`/about`) — company/product story.
+- **Category pages** — dedicated landing pages per audience segment:
+  - Startups & Teams (`/startups-teams`)
+  - Events & Conferences (`/events-conferences`)
+  - Hospitality & Service Staff (`/hospitality-service-staff`)
+  - Studios & Performance Teams (`/studios-performance-teams`)
+  - Fitness & Wellness Brands (`/fitness-wellness-brands`)
+  - Schools & Educational Institutions (`/schools-educational-institutions`)
+  - Retail, Cafes & Boutiques (`/retail-cafes-boutiques`)
+- Light/dark theme toggle, toast notifications, and a fully responsive layout.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c8ea970b-bc55-46e9-9515-9e48be4fd7b8) and start prompting.
+## Tech stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- [Vite](https://vitejs.dev/) + [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [shadcn/ui](https://ui.shadcn.com/) on top of [Radix UI](https://www.radix-ui.com/) primitives
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Router](https://reactrouter.com/) for client-side routing
+- [TanStack Query](https://tanstack.com/query) for data/query state
+- [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) for forms/validation
 
-**Use your preferred IDE**
+## Local development
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requires Node.js 18+.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/Abhilash7337/wear-attract-showcase.git
+cd wear-attract-showcase
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the dev server (http://localhost:8080)
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Other scripts:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build      # production build -> dist/
+npm run build:dev   # development-mode build
+npm run preview     # preview the production build locally
+npm run lint         # run ESLint
+```
 
-**Use GitHub Codespaces**
+## Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The site auto-deploys to **GitHub Pages** on every push to `main` via the workflow at
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml): it builds the app with Vite and
+publishes `dist/` using GitHub's official Pages Actions (`actions/upload-pages-artifact` +
+`actions/deploy-pages`).
 
-## What technologies are used for this project?
+Because the site is served from a project subpath (`/wear-attract-showcase/`), two things are
+configured for that:
 
-This project is built with:
+- `vite.config.ts` sets `base: "/wear-attract-showcase/"` so built asset URLs resolve correctly.
+- `src/App.tsx` sets `<BrowserRouter basename={import.meta.env.BASE_URL}>`, and
+  [`public/404.html`](public/404.html) contains the standard
+  [SPA-on-GitHub-Pages redirect trick](https://github.com/rafgraph/spa-github-pages) so deep links
+  (e.g. `/about`) and page refreshes work instead of 404ing.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c8ea970b-bc55-46e9-9515-9e48be4fd7b8) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+To deploy elsewhere, run `npm run build` and serve the contents of `dist/`.
