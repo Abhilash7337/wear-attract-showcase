@@ -4,11 +4,11 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   // Array of t-shirt images for floating animation
   const tshirtImages = [
-    '/tshirt.png',
-    '/tshirt1.png',
+    `${import.meta.env.BASE_URL}tshirt.png`,
+    `${import.meta.env.BASE_URL}tshirt1.png`,
     // Add more t-shirt images here as they become available
-    // '/tshirt2.png',
-    // '/tshirt3.png',
+    // `${import.meta.env.BASE_URL}tshirt2.png`,
+    // `${import.meta.env.BASE_URL}tshirt3.png`,
   ];
 
   return (

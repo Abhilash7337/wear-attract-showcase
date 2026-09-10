@@ -58,7 +58,7 @@ const Header = () => {
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
             <a href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
               <img 
-                src={theme === 'light' ? '/logo-light.png' : '/logo.png'}
+                src={`${import.meta.env.BASE_URL}${theme === 'light' ? 'logo-light.png' : 'logo.png'}`}
                 alt="Wear Attraction" 
                 className="h-10 w-auto transition-all duration-300 hover:scale-105 drop-shadow-lg"
               />
